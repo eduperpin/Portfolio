@@ -1,0 +1,113 @@
+/* Import das fontes escolhidas no fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+/* import dos icones em https://cdnjs.com/libraries/font-awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+*{   /* Retirar todas as margens dos elementos */
+    margin: 0;
+    padding: 0;
+}
+
+header {         
+    width: 100%;         /* Vai ocupar a tela inteira, por iso 100% */ 
+    height: 100vh;       /* Altura da pagina da visualização do navegador. Depende se Note, Mobile, Tablet */
+    overflow: hidden;    /* não cria a barra de rolagem horizontal quando é reduzida a tela */
+    position: relative;  /* para o position absoluto no banner funcionar */
+}
+
+.img-wrapper {   /* Classe no CSS para o pacote da Imagem Principal */
+    width: 100%;  /* Vai ocupar todo o espaço do container Header */
+    height: 100%;
+    overflow: hidden; /* não cria a barra de rolagem horizontal quando é reduzida a tela */
+    background-color: rgba(0,0,0,0.8) /* o fundo sera preto com 0.50% de opacidade */
+}   
+
+.img-wrapper img{  /* formatar apenas a imagem (Img) que está dentro de img-wrapper */
+    width: 100%;  /* Vai ocupar todo o espaço do container Header */
+    height: 100%;
+    object-fit: cover;  /* Quando a tela é reduzida para trabalhar com a centralização da imagem */
+    opacity: 0.5; /* cria uma transparencia na imagem */
+    /* animação do Zoom  animation: nome duração(segundos) */
+    animation: zoom 15s;
+} 
+
+/*---------------------- Animação de Abertura --------------------- */
+@keyframes zoom {
+    0%{
+        transform: scale(1.3);    /* zoom de 30% na imagem */
+    }
+    100%{
+        transform: scale(1);      /* passa para 100% da imagem */
+    }
+}
+
+.banner {
+    position: absolute;
+    left: 15%;  /* posição do elemento em relação a borda esquerda */
+    top: 30%;  /* 30% do topo da margem superior */
+}
+
+.banner h1{   /* Formatar apenas o H1 que está dentro do Banner */ 
+    color: #ffffff;  /* Cor da Fonte Branco */
+    font-size: 2.5rem; /* se 16px, ao ampliar a tela não vai ampliar. 1rem vai usar o padrao 16px3.5x16px= 56px */
+    font-family: "Baloo Da 2", serif; /* fonte do Google definida no .Css e, caso o link de fotes fique fora do ar, será utilizada a font serif como padrão */
+    font-weight: 100; /* carregar a fonte na sua bold */
+    text-shadow: .3rem .4rem 2px rgba(0, 0, 0, 0.4); /* Configuração para a sombra */
+    line-height: 1.0; /* Espaço entre "Web Developer & Front End" com "Designer" */
+    margin-bottom: 2rem; /* Após exibir o h1, dar um espaço para iniciar o paragrafo abaixo */ 
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;  /* 0.5 segundos de atraso */
+    
+}
+.banner p{  /* Configurar o parágrafo dentro do Banner */
+    color: #ffffff;  /* Cor da Fonte Branco */
+    font-size: 1.5rem; /* se 16px, ao ampliar a tela não vai ampliar. 1rem vai usar o padrao 16px 2x16px= 32px */
+    font-family: "Josefin Slab", serif; /* fonte do Google definida no .Css e, caso o link de fotes fique fora do ar, será utilizada a font serif como padrão */
+    text-shadow: .2rem .2rem rgba(0, 0, 0, 0.4); /* Configuração para a sombra */
+    margin-bottom: 2rem; /* Após exibir o p1, dar um espaço para exibir o botão abaixo */ 
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;  /* 0.7 segundos de atraso */
+} 
+
+.banner button{ /* Botão dentro do Banner */
+    font-family: "Mulish", serif; /* fonte do Google definida no .Css e, caso o link de fotes fique fora do ar, será utilizada a font serif como padrão */
+    color: #ffffff;  /* Cor da Fonte Branco */
+    font-size: 0.8rem;
+    text-transform: uppercase;  /* passou para todas as letras maiusculas */
+    letter-spacing: 0.1rem;     /* Espaços entre as letras */
+    /* utilizando o uigradientes.com e copiando o gradiente do Background do botão */
+    background: #FF0099;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* padding: 1rem; Significa que o botão ficaria com 16px de espaço em cima, em baixo, direita e esquerda. mas vamos colocar espaços diferentes para o texto dentro do botão */
+
+    /* Os 4 comandos abaixo, podem ser reduzindos no proximo padding
+    padding-top: 0.5rem;      topo com 8px 
+    padding-bottom: 0.5rem;   Parte inferior com 8px 
+    padding-left: 1rem;       esquerda com 16px 
+    padding-right: 1rem;      direita com 16px */
+    
+    /* padding pode ser usado tb -> padding: Topo, Right, bottom, Left */
+    padding: 0.5rem 2.5rem;   /* 0.5 rem topo e bottom e 1 rem direita e esquerda */
+    border: none;   /* sem bordas */
+    border-radius: 5px;  /* Arredondar a borda do botão em 5px */
+    cursor: pointer; /* quando passar o mouse em cima do botão, vira um ponteiro */
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;  /* 0.9 segundos de atraso */
+}
+
+@keyframes moveBanner {
+    0%{
+        transform: translateY(10rem) rotateY(.30deg);    /* desce 160px  com rotação de 30 graus*/
+    }
+    100%{
+        transform: translateY(0) rotatey(0);      /* posição que estava antes */
+        opacity: 1; /* após animação ele apresenta o texto */
+    }
+}
+
+.banner button:hover{
+    opacity: 0.8;   /* muda o opacidade */
+    color: black;  /* muda a cor da fonte */
+}
+
