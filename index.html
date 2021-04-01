@@ -13,7 +13,16 @@
 </head>
 <body>
     <div class="container">
-        <header>
+
+        <!-- Definindo o Menu Hamburger-->
+        <div class="hamburger">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>fechar</span>
+        </div>
+        <!-- Fim do Menu Hamburger-->
+        <header id="home">
             <div class="img-wrapper"> <!-- Div com a classe img-wrapper - um pacote para formatar a imagem -->
                 <img src="imagens/monitores.jpg" alt="">
             </div>
@@ -23,9 +32,234 @@
                 <p>Eduardo Pereira (E2P)</p>
                 <button>Saiba mais</button>
             </div>
+         </header>
  
-        </header>
+         <!-- Definindo os Itens do Menu Hamburger-->
+        
+         <aside class="sidebar">
+              <nav>
+                  <!-- href#conhecimentos vai para o id=conhecimentos na Section sessa-conhecimento 
+                  quando clicado no menu. E assim, para os demais itens de menu -->
+                  <ul class="menu">  
+                      <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                      <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimento</a></li>
+                      <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                      <li class="menu-item"><a href="#contatos" class="menu-link">Contatos</a></li>
+                      <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
+                  </ul>
+              </nav>
+
+              <!-- Icones das Medias Sociais -->
+              
+              <div class="social-media">
+                  <a href="#"><i class="fab fa-facebook"></i></a> 
+                  <a href="#"><i class="fab fa-github-alt"></i></a> 
+                  <a href="#"><i class="fab fa-twitter"></i></a> 
+              </div>
+
+              <!-- Fim Icones das Medias Sociais -->
+
+         </aside>
+            
+         <!-- Fim da Definição dos Itens do Menu Hamburger-->
+ 
+         <!-- Inicio da Sessão Conhecimentos -->
+         <section class="sessao-conhecimentos" id="conhecimentos">
+            <div class="sessao-header">
+                <h1>Conhecimentos</h1>
+            </div>   <!-- Fim div sessao-header -->
+            <div class="conhecimentos">
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i  class="fab fa-html5"></i>
+                        <h3>HTML</h3>             
+                    </div> <!-- Fim div conhecimento-header -->
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo? Odio minus ea voluptatum veniam id quaerat earum et? Minima earum, nobis tempora eos nulla obcaecati? Atque quia omnis beatae?</p>
+                    </div> <!-- Fim div conhecimento-text -->
+                </div> <!-- Fim div conhecimento -->
+
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i  class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>             
+                    </div> <!-- Fim div conhecimento-header -->
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo? Odio minus ea voluptatum veniam id quaerat earum et? Minima earum, nobis tempora eos nulla obcaecati? Atque quia omnis beatae?</p>
+                    </div> <!-- Fim div conhecimento-text -->
+                </div> <!-- Fim div conhecimento -->
+
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>Design</h3>             
+                    </div> <!-- Fim div conhecimento-header -->
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo? Odio minus ea voluptatum veniam id quaerat earum et? Minima earum, nobis tempora eos nulla obcaecati? Atque quia omnis beatae?</p>
+                    </div> <!-- Fim div conhecimento-text -->
+                </div> <!-- Fim div conhecimento -->
+
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i  class="fab fa-js"></i>
+                        <h3>JS</h3>             
+                    </div> <!-- Fim div conhecimento-header -->
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo? Odio minus ea voluptatum veniam id quaerat earum et? Minima earum, nobis tempora eos nulla obcaecati? Atque quia omnis beatae?</p>
+                    </div> <!-- Fim div conhecimento-text -->
+                </div> <!-- Fim div conhecimento -->
+
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i  class="fab fa-bootstrap"></i>
+                        <h3>Bootstrap</h3>             
+                    </div> <!-- Fim div conhecimento-header -->
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo? Odio minus ea voluptatum veniam id quaerat earum et? Minima earum, nobis tempora eos nulla obcaecati? Atque quia omnis beatae?</p>
+                    </div> <!-- Fim div conhecimento-text -->
+                </div> <!-- Fim div conhecimento -->
+
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i  class="fab fa-github"></i>
+                        <h3>GitHub</h3>             
+                    </div> <!-- Fim div conhecimento-header -->
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nemo? Odio minus ea voluptatum veniam id quaerat earum et? Minima earum, nobis tempora eos nulla obcaecati? Atque quia omnis beatae?</p>
+                    </div> <!-- Fim div conhecimento-text -->
+                </div> <!-- Fim div conhecimento -->
+
+                <div class="conhecimentos-img-wrapper">
+                    <img src="imagens/conhecimentos.jpg" alt="imagem conhecimento" srcset="">
+                </div>
+
+            </div>   <!-- Fim div conhecimentos -->
+
+         </section>  <!-- Fim sessao-conhecimentos -->
+         
+         <section class="sessao-projetos" id="projetos">   <!-- Inicio da Sessão Projetos -->
+            <div class="sessao-header">
+                <h1>Projetos</h1>
+            </div>
+            <div class="projetos">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/imagens/projeto1.jpg" alt="Imagem do Projeto 1">
+                    </div>
+                    <div class="card-info">
+                        <h2>Projeto 1</h2>
+                        <h3>JavaScript</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ut consequatur vel. Repellendus quasi nobis quo nihil quisquam non labore deserunt tempora magni quia? Est rerum mollitia amet fugiat qui.</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">    
+                    <div class="card-img-wrapper">
+                        <img src="/imagens/projeto2.jpg" alt="imagem projeto 2">
+                    </div>
+                    <div class="card-info">
+                        <h2>Projeto 2</h2>
+                        <h3>Definir</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi consequatur cumque tenetur accusamus maiores ratione incidunt neque perferendis autem ea atque maxime cum, laboriosam corrupti, quas nemo exercitationem non doloribus.</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div> 
+                <div class="card">  
+                    <div class="card-img-wrapper">
+                        <img src="/imagens/projeto4.jpg" alt="imagem do projeto3">
+                    </div>
+                    <div class="card-info">
+                        <h2>Projeto 3</h2>
+                        <h3>Não Sei</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum animi corrupti iusto ex quis. Repellendus enim quis animi culpa reprehenderit, accusamus officia consequatur, aut, adipisci obcaecati a quibusdam? In, veritatis!</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+
+         </section>   <!-- Fim da Sessão Projetos -->
+
+         <section class="sessao-contato" id="contatos">  <!-- Inicio da Sessão Contato -->
+            <div class="contato-wrapper">
+                <div class="contato-left"></div>
+                <div class="contato-right">
+                    <h1>contato</h1>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="field" id="nome">
+                            <label for="nome" class="field-label">Nome</lable>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="field" id="email">
+                            <label for="email" class="field-label">E-mail</lable>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="field" id="mensagem">
+                            <label for="mensagem" class="field-label">Mensagem</lable>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar</button>
+                    </form>
+                    
+                </div>
+            </div>
+
+         </section>  <!-- Fim da Sessão Contato -->
+
+         <section class="sessao-orcamento" id="orcamento">  <!-- Inicio da Sessão Orçamento -->
+            <div class="orcamento-wrapper">
+                 <h1>Faça o Orçamento</h1>
+                 <form action="">
+                     <label for="qtde">Qtde de Páginas</label>
+                     <input type="number" min="1" max="999" name="qtde" id="qtde">
+
+                    <label for="js">Preciso de um script JS</label>
+                    <input type="checkbox" name="js" id="js">
+                    <label>Layout</label>
+
+                    <div class="group-layout">
+                        <div>
+                            <input type="radio" name="layout" id="layout-sim">
+                            <Label for="layout-sim">Preciso de um Layout</Label>
+                        </div>
+                        <div>
+                            <input type="radio" name="layout" id="layout-nao">
+                            <Label for="layout-nao">Já tenho um Layout</Label>
+                        </div>
+                    </div>
+
+                    <label for="prazo">Prazo</label>
+                    <input type="range" min="1" max="10" name="prazo" id="prazo"> 
+                    <label id="preco">R$ 0,00</label>
+
+                    <button type="submit" class="btn-orcamento">Enviar</button>
+
+                 </form>
+
+            </div>
+
+         </section>  <!-- Fim da Sessão Orçamento -->
+
+         <footer>    <!-- Inicio Rodapé -->
+            <div class="footer-content">
+                <p>
+                   Copyright &copy; 2021, Reithoria - Todos os direitos reservados  
+                </p>
+                <div class="social-list">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+         </footer>   <!-- Fim do Rodape-->
+         <a href="#home" id="link-topo">
+             <i class="fas fa-arrow-up"></i>
+         </a>
+
+        </div>
     </div>
-    
 </body>
+<script src="script.js"></script>
+
 </html>
